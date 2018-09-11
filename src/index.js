@@ -2,8 +2,16 @@ module.exports = function getZerosCount(number, base) {
   // a perfect example of StackOverflow Programming
   // a copy-translate-from-c solution
   // https://stackoverflow.com/questions/23202489/how-does-this-code-find-the-number-of-trailing-zeros-from-any-base-number-factor
-  var i, p, c, k, zeroesCount;
-  zeroesCount = number
+  // 
+  // https://math.stackexchange.com/questions/226868/number-of-trailing-zeros-in-a-factorial-in-base-b
+  // https://brilliant.org/wiki/trailing-number-of-zeros/
+
+  let i;
+  let p;
+  let c;
+  let k;
+  let zeroesCount;
+  zeroesCount = number;
   for (i = 2; i <= base; i++) {
     if (base % i == 0) {
       p = 0;
@@ -21,4 +29,4 @@ module.exports = function getZerosCount(number, base) {
     }
   }
   return zeroesCount;
-}
+};
